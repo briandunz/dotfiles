@@ -162,3 +162,7 @@ alias reload="exec $SHELL -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# My additions 
+alias dockerup="if [ \$(docker-machine status) == \"Stopped\" ]; then docker-machine start; fi && eval \"\$(docker-machine env default)\""
+alias brewup="brew update && brew upgrade && brew cleanup && brew cask cleanup && brew dr"
